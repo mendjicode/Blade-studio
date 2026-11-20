@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#171714">
+<title>BLADE STUDIO — концепция сайта</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600&family=Golos+Text:wght@400;500;600;700&family=Oswald:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+:root{--ink:#191a17;--paper:#eeeae2;--muted:#77776e;--acid:#c9e56a;--line:rgba(25,26,23,.18);--darkline:rgba(238,234,226,.2);--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit}.topnote{background:var(--acid);color:#20221a;text-align:center;padding:9px 15px;font-size:10px;letter-spacing:.15em;text-transform:uppercase}.nav{height:82px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;border-bottom:1px solid var(--line);position:relative;z-index:5;background:var(--paper)}.logo{font-size:23px;letter-spacing:-.08em;font-weight:700}.logo span{font-weight:400}.navlinks{display:flex;gap:32px;font-size:11px;text-transform:uppercase;letter-spacing:.12em}.navlinks a{transition:opacity .2s}.navlinks a:hover{opacity:.5}.navright{display:flex;align-items:center;gap:20px}.navcta{font-size:10px;text-transform:uppercase;letter-spacing:.12em;border-bottom:1px solid;padding:8px 0}.menu-btn{display:none;border:0;background:none;font-size:24px}.hero{min-height:690px;display:grid;grid-template-columns:1fr 1.02fr;background:var(--ink);color:var(--paper);position:relative;overflow:hidden}.hero-copy{padding:100px 5vw 70px;display:flex;flex-direction:column;justify-content:space-between;position:relative;z-index:2}.eyebrow{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#b6b4a8}.hero h1{font-size:clamp(64px,9vw,142px);line-height:.82;letter-spacing:-.09em;margin:45px 0 30px;font-weight:500}.hero h1 em{font-family:var(--serif);font-weight:500;letter-spacing:-.07em;color:var(--acid)}.hero-desc{max-width:350px;color:#c4c1b7;font-size:14px;line-height:1.8}.hero-bottom{display:flex;align-items:center;gap:25px;margin-top:55px}.pill{display:inline-flex;align-items:center;gap:18px;background:var(--acid);color:var(--ink);padding:17px 21px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;transition:transform .2s}.pill:hover{transform:translateY(-3px)}.textlink{font-size:10px;text-transform:uppercase;letter-spacing:.12em;border-bottom:1px solid #77776e;padding-bottom:7px}.hero-visual{position:relative;min-height:600px}.hero-visual:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ink),transparent 25%),linear-gradient(0deg,rgba(0,0,0,.35),transparent 45%);z-index:1}.hero-visual img{width:100%;height:100%;object-fit:cover;filter:saturate(.65) contrast(1.06)}.hero-stamp{position:absolute;right:6%;bottom:7%;z-index:2;border:1px solid rgba(238,234,226,.6);border-radius:50%;width:112px;height:112px;display:grid;place-items:center;text-align:center;font-size:9px;line-height:1.5;letter-spacing:.12em;text-transform:uppercase;transform:rotate(12deg)}.hero-index{position:absolute;left:5vw;bottom:24px;color:#88877e;font-size:9px;letter-spacing:.15em}.intro{padding:120px 10vw 130px;display:grid;grid-template-columns:.7fr 1.3fr;gap:9vw}.section-label{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}.intro h2{font-size:clamp(35px,5vw,68px);font-weight:500;line-height:1.08;letter-spacing:-.06em;margin:0}.intro h2 em{font-family:var(--serif);font-weight:500}.intro p{max-width:510px;color:#65665d;font-size:14px;line-height:1.9;margin:28px 0 0}.intro-note{margin-top:45px;font-size:10px;letter-spacing:.13em;text-transform:uppercase;display:flex;align-items:center;gap:14px}.intro-note:before{content:"";width:36px;height:1px;background:var(--ink)}.dark-section{background:#20211d;color:var(--paper);padding:105px 5vw 120px}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:50px}.section-head h2{font-size:clamp(42px,6vw,82px);font-weight:500;letter-spacing:-.07em;line-height:.95;margin:18px 0 0}.section-head h2 em{font-family:var(--serif);color:var(--acid);font-weight:500}.section-head p{max-width:260px;color:#aaa99f;font-size:12px;line-height:1.8}.services{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--darkline)}.service{padding:28px 25px 32px 0;border-bottom:1px solid var(--darkline);min-height:245px;position:relative}.service:not(:nth-child(3n)){border-right:1px solid var(--darkline);padding-right:30px}.service:nth-child(3n+2),.service:nth-child(3n){padding-left:30px}.service small{font-size:10px;color:var(--acid);letter-spacing:.16em}.service h3{font-family:var(--serif);font-size:30px;font-weight:500;margin:35px 0 12px}.service p{font-size:12px;color:#aaa99f;line-height:1.8;max-width:270px}.service .arrow{position:absolute;right:24px;bottom:30px;color:var(--acid);font-size:22px}.work{padding:120px 5vw 130px}.worktop{display:flex;justify-content:space-between;align-items:end;margin-bottom:45px}.worktop h2{font-size:clamp(45px,7vw,92px);line-height:.9;letter-spacing:-.08em;font-weight:500;margin:20px 0 0}.worktop h2 em{font-family:var(--serif);font-weight:500}.workgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}.workitem{position:relative;overflow:hidden;background:#d8d3c8}.workitem img{width:100%;height:100%;min-height:400px;object-fit:cover;display:block;filter:saturate(.7);transition:transform .7s}.workitem:hover img{transform:scale(1.035)}.workitem.tall img{min-height:620px}.workitem.small img{min-height:290px}.workside{display:grid;gap:20px}.workcaption{display:flex;justify-content:space-between;padding:13px 0;font-size:10px;text-transform:uppercase;letter-spacing:.12em}.workcaption span:last-child{color:var(--muted)}.team{background:#dcd8cf;padding:110px 5vw 120px}.teamgrid{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:center}.teamvisual{height:550px;overflow:hidden}.teamvisual img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.04)}.teamcopy h2{font-size:clamp(43px,6vw,76px);line-height:.98;letter-spacing:-.07em;font-weight:500;margin:25px 0}.teamcopy h2 em{font-family:var(--serif)}.teamcopy p{max-width:410px;font-size:13px;line-height:1.9;color:#64645d}.teamfacts{display:flex;gap:35px;margin:38px 0}.fact strong{display:block;font-family:var(--serif);font-size:32px;font-weight:500}.fact span{font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:#77776e}.brands{padding:75px 5vw;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:30px}.brands-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);max-width:120px;line-height:1.6}.brandname{font-family:var(--serif);font-size:clamp(20px,3vw,36px);color:#77776e}.booking{background:var(--acid);padding:100px 5vw;display:grid;grid-template-columns:1fr .8fr;gap:10vw;align-items:end}.booking h2{font-size:clamp(55px,8vw,105px);line-height:.85;letter-spacing:-.09em;font-weight:500;margin:20px 0 0}.booking h2 em{font-family:var(--serif)}.booking-side p{font-size:13px;line-height:1.8;max-width:360px}.booking .pill{background:var(--ink);color:var(--paper);margin-top:20px}.footer{background:var(--ink);color:var(--paper);padding:65px 5vw 30px}.footer-top{display:flex;justify-content:space-between;gap:40px;padding-bottom:70px}.footer-logo{font-size:clamp(55px,10vw,130px);letter-spacing:-.1em;line-height:.8}.footer-logo span{color:var(--acid)}.footer-info{display:flex;gap:70px}.footer-col small{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#96958b}.footer-col p,.footer-col a{display:block;font-size:12px;line-height:2;color:#d0cec4}.footer-bottom{border-top:1px solid var(--darkline);padding-top:18px;display:flex;justify-content:space-between;color:#89887e;font-size:9px;letter-spacing:.1em;text-transform:uppercase}.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
+@media(max-width:800px){.nav{height:70px}.navlinks{display:none}.menu-btn{display:block}.navright .navcta{display:none}.hero{grid-template-columns:1fr;min-height:0}.hero-copy{padding:75px 7vw 45px;min-height:530px}.hero h1{font-size:clamp(70px,17vw,120px);margin:55px 0 25px}.hero-visual{min-height:430px;grid-row:1}.hero-visual:before{background:linear-gradient(0deg,var(--ink),transparent 40%)}.hero-index{left:7vw}.intro{padding:85px 7vw;grid-template-columns:1fr;gap:35px}.dark-section,.work,.team{padding:80px 7vw}.section-head,.worktop{display:block}.section-head p{margin-top:25px}.services{grid-template-columns:1fr 1fr}.service:nth-child(n){padding:25px 18px 30px 0;border-right:0}.service:nth-child(odd){border-right:1px solid var(--darkline)}.service:nth-child(even){padding-left:18px}.service h3{font-size:25px}.workgrid{grid-template-columns:1fr}.workitem.tall img{min-height:440px}.workitem img{min-height:320px}.teamgrid{grid-template-columns:1fr;gap:40px}.teamvisual{height:430px}.brands{flex-wrap:wrap;justify-content:flex-start;padding:55px 7vw}.brands-label{width:100%;max-width:none}.booking{grid-template-columns:1fr;padding:80px 7vw;gap:35px}.footer-top{display:block}.footer-info{margin-top:55px;gap:45px;flex-wrap:wrap}.footer-bottom{gap:15px;flex-wrap:wrap}}
+@media(max-width:480px){.hero-copy{min-height:500px}.hero-visual{min-height:340px}.hero-bottom{align-items:flex-start;flex-direction:column}.services{grid-template-columns:1fr}.service:nth-child(n){border-right:0;padding:25px 0}.service{min-height:205px}.workitem.tall img{min-height:380px}.teamvisual{height:360px}.teamfacts{gap:22px}.footer-info{gap:30px}.footer-bottom{line-height:1.8}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* ART DIRECTION V2 — darker, more tactile, more editorial */
+:root{
+ --ink:#10100f;--paper:#171715;--muted:#8c8981;--acid:#b48a73;--line:rgba(225,219,207,.17);--darkline:rgba(225,219,207,.15);
+ --serif:'Bodoni Moda',Didot,serif;--sans:'Manrope',Arial,sans-serif;
+}
+html{background:var(--paper)}
+body{background:#171715;color:#e7e1d7}
+.topnote{background:#242320;color:#b9a99a;border-bottom:1px solid rgba(225,219,207,.13);font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.16em}
+.nav{background:#171715;color:#e7e1d7;border-color:var(--line)}
+.logo{font-family:'Bodoni Moda',serif;font-size:28px;letter-spacing:-.08em}
+.logo span{color:#b48a73}
+.navlinks,.navcta,.eyebrow,.section-label,.textlink,.pill,.hero-index,.service small,.workcaption,.brands-label,.fact span,.footer-col small,.footer-bottom{font-family:'IBM Plex Mono',monospace}
+.navlinks{font-size:9px;letter-spacing:.1em}
+.navcta{border-color:#a88d7d}
+.hero{background:#10100f;color:#e7e1d7;min-height:740px;grid-template-columns:.92fr 1.08fr}
+.hero-copy{padding-top:105px;padding-bottom:82px}
+.hero h1{font-family:'Manrope',sans-serif;font-weight:500;font-size:clamp(68px,9.4vw,148px);letter-spacing:-.105em;line-height:.78}
+.hero h1 em{font-family:'Bodoni Moda',serif;font-style:italic;color:#b48a73;letter-spacing:-.09em}
+.hero-desc{color:#b7b1a7;font-size:13px;max-width:330px}
+.hero-visual img{filter:grayscale(.35) saturate(.55) contrast(1.12) brightness(.78)}
+.hero-visual:before{background:linear-gradient(90deg,#10100f 0%,rgba(16,16,15,.15) 38%,transparent 70%),linear-gradient(0deg,rgba(0,0,0,.5),transparent 55%)}
+.hero-stamp{border-color:rgba(231,225,215,.45);color:#e7e1d7;font-family:'IBM Plex Mono',monospace}
+.pill{background:#b48a73;color:#11100f;border-radius:0;padding:17px 22px;font-size:9px}
+.textlink{color:#e7e1d7;border-color:#81756b;font-size:9px}
+.intro{background:#171715;color:#e7e1d7}
+.intro h2,.section-head h2,.worktop h2,.teamcopy h2,.booking h2{font-family:'Manrope',sans-serif;font-weight:400;letter-spacing:-.075em}
+.intro h2 em,.section-head h2 em,.worktop h2 em,.teamcopy h2 em,.booking h2 em{font-family:'Bodoni Moda',serif;font-style:italic;color:#b48a73}
+.intro p{color:#aaa49a}
+.intro-note{color:#b48a73}
+.intro-note:before{background:#b48a73}
+.dark-section{background:#10100f;color:#e7e1d7}
+.section-head p{color:#a7a197}
+.service{border-color:var(--darkline)}
+.service small{color:#b48a73}
+.service h3{font-family:'Bodoni Moda',serif;font-size:36px;font-weight:500}
+.service p{color:#aaa49a}
+.service .arrow{color:#b48a73}
+.work{background:#1b1b18;color:#e7e1d7}
+.workitem{background:#292824}
+.workitem img{filter:grayscale(.28) saturate(.58) contrast(1.08) brightness(.86)}
+.workcaption span:last-child{color:#918b80}
+.team{background:#24231f;color:#e7e1d7}
+.teamvisual img{filter:grayscale(.55) contrast(1.08) brightness(.82)}
+.teamcopy p{color:#b4aea3}
+.fact strong{font-family:'Bodoni Moda',serif;color:#b48a73;font-size:38px}
+.fact span{color:#aaa49a}
+.brands{background:#171715;border-color:var(--line)}
+.brandname{font-family:'Bodoni Moda',serif;color:#c3b8aa;letter-spacing:.04em}
+.booking{background:#b48a73;color:#151412}
+.booking .section-label{color:#342720}
+.booking h2 em{color:#eee4d8}
+.booking-side p{color:#342c27}
+.booking .pill{background:#151412;color:#eee8df}
+.footer{background:#0d0d0c;color:#e7e1d7}
+.footer-logo{font-family:'Manrope',sans-serif;font-weight:500;letter-spacing:-.11em}
+.footer-logo span{color:#b48a73}
+.footer-col small{color:#a88d7d}
+.footer-col p,.footer-col a{color:#c9c2b8}
+.footer-bottom{border-color:var(--darkline);color:#817c73}
+.reveal{transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+/* Graphic interventions */
+.hero:after{content:"B / S";position:absolute;z-index:2;right:4.7vw;top:28px;color:rgba(231,225,215,.55);font:10px 'IBM Plex Mono',monospace;letter-spacing:.25em}
+.hero-copy:after{content:"CUT  /  COLOUR  /  FORM";position:absolute;left:5vw;top:43px;font:9px 'IBM Plex Mono',monospace;letter-spacing:.18em;color:#8f8278}
+.intro{position:relative}
+.intro:after{content:"BLADE — 01";position:absolute;right:5vw;bottom:42px;font:9px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:#777269}
+.dark-section{position:relative}
+.dark-section:after{content:"THE PRACTICE";position:absolute;right:5vw;top:112px;writing-mode:vertical-rl;font:9px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#716b62}
+.service{transition:background .35s,padding .35s}
+.service:hover{background:rgba(180,138,115,.055);padding-left:16px}
+.worktop p{color:#a7a197;line-height:1.8}
+.team{position:relative;overflow:hidden}
+.team:after{content:"B";position:absolute;right:-2vw;bottom:-20vw;font:50vw 'Bodoni Moda',serif;color:rgba(231,225,215,.025);pointer-events:none;line-height:1}
+.teamgrid{position:relative;z-index:1}
+.booking{position:relative;overflow:hidden}
+.booking:after{content:"BLADE";position:absolute;right:-2vw;top:-5vw;font:24vw 'Manrope',sans-serif;letter-spacing:-.12em;color:rgba(20,18,16,.07);pointer-events:none}
+.booking>*{position:relative;z-index:1}
+@media(max-width:800px){
+ .hero{grid-template-columns:1fr}
+ .hero-copy:after{left:7vw}
+ .hero:after{top:20px;right:7vw}
+ .dark-section:after{display:none}
+ .intro:after{right:7vw;bottom:20px}
+ .booking:after{font-size:35vw;top:8vw}
+}
+@media(prefers-reduced-motion:reduce){.service{transition:none}}
+
+
+/* TYPOGRAPHY V3 — distinctive editorial grotesk, not a default SaaS font */
+:root{
+  --sans:'Golos Text',sans-serif;
+}
+body{font-family:'Golos Text',sans-serif}
+.logo,.footer-logo{font-family:'Oswald',sans-serif;font-weight:500;letter-spacing:-.055em}
+.hero h1,
+.intro h2,
+.section-head h2,
+.worktop h2,
+.teamcopy h2,
+.booking h2{
+  font-family:'Oswald',sans-serif;
+  font-weight:400;
+  letter-spacing:-.045em;
+  text-transform:uppercase;
+}
+.hero h1{font-size:clamp(72px,10vw,154px);line-height:.83;letter-spacing:-.055em}
+.hero h1 em,
+.intro h2 em,
+.section-head h2 em,
+.worktop h2 em,
+.teamcopy h2 em,
+.booking h2 em{
+  font-family:'Bodoni Moda',serif;
+  font-style:italic;
+  text-transform:none;
+  letter-spacing:-.08em;
+}
+.service h3{font-family:'Bodoni Moda',serif;font-style:italic;font-weight:500}
+.brandname{font-family:'Oswald',sans-serif;font-weight:400;letter-spacing:.08em}
+.footer-logo{font-size:clamp(65px,11vw,142px);text-transform:uppercase}
+.navlinks{font-family:'IBM Plex Mono',monospace}
+.hero-desc,.intro p,.section-head p,.service p,.teamcopy p,.booking-side p{
+  font-family:'Golos Text',sans-serif;
+  letter-spacing:.005em;
+}
+.section-label,.eyebrow,.hero-index,.workcaption,.brands-label,.fact span,.footer-col small,.footer-bottom{
+  font-family:'IBM Plex Mono',monospace;
+}
+
+</style>
+</head>
+<body>
+<div class="topnote">Independent concept · Website redesign proposal · 2026</div>
+<header class="nav">
+  <a class="logo" href="#top">BLADE<span>®</span></a>
+  <nav class="navlinks"><a href="#about">О студии</a><a href="#services">Услуги</a><a href="#works">Работы</a><a href="#team">Команда</a></nav>
+  <div class="navright"><a class="navcta" href="#booking">Запись / контакты ↗</a><button class="menu-btn" aria-label="Открыть меню" onclick="document.querySelector('.navlinks').classList.toggle('mobile-open')">☰</button></div>
+</header>
+<main id="top">
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">Лаборатория красоты · Москва · Hair / Colour / Care</div>
+    <div>
+      <h1>HAIR<br><em>has</em><br>attitude.</h1>
+      <p class="hero-desc">Пространство точной формы, сложного цвета и индивидуального стиля. Красота без шаблонов — с характером, который невозможно повторить.</p>
+      <div class="hero-bottom"><a class="pill" href="#services">Исследовать студию <span>↗</span></a><a class="textlink" href="#works">Смотреть работы</a></div>
+    </div>
+    <div class="hero-index">01 / 05 &nbsp;&nbsp; BLADE STUDIO — CONCEPT</div>
+  </div>
+  <div class="hero-visual">
+    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1500&q=88" alt="Редакционный портрет с акцентом на волосы">
+    <div class="hero-stamp">CUT<br>COLOUR<br>CARE<br>— MOSCOW —</div>
+  </div>
+</section>
+<section class="intro reveal" id="about">
+  <div><div class="section-label">01 / Philosophy</div><div class="intro-note">Не просто салон. Подход.</div></div>
+  <div><h2>Стиль — это<br>форма <em>характера.</em></h2><p>Сильный образ не нуждается в лишних объяснениях. Он строится на точности, чувстве пропорций и диалоге с мастером. Эта концепция раскрывает студию через эстетику, экспертизу и внимание к деталям.</p><p>Концепция обновлённого сайта раскрывает студию через её сильные стороны: экспертизу мастеров, качество работы и внимание к деталям.</p></div>
+</section>
+<section class="dark-section" id="services">
+  <div class="section-head reveal"><div><div class="section-label">02 / What we do</div><h2>Форма. Цвет.<br><em>Текстура.</em></h2></div><p>Основные направления студии — в понятной структуре, без лишнего шума. Выберите то, с чего хотите начать.</p></div>
+  <div class="services">
+    <article class="service reveal"><small>01 — CUT</small><h3>Стрижки</h3><p>Форма, пропорции и укладка, которые работают с вашей индивидуальностью.</p><span class="arrow">↗</span></article>
+    <article class="service reveal"><small>02 — COLOUR</small><h3>Окрашивание</h3><p>От деликатного обновления оттенка до сложных цветовых решений.</p><span class="arrow">↗</span></article>
+    <article class="service reveal"><small>03 — CARE</small><h3>Уход за волосами</h3><p>Профессиональные процедуры для качества, блеска и здоровья волос.</p><span class="arrow">↗</span></article>
+    <article class="service reveal"><small>04 — NAILS</small><h3>Ногтевой сервис</h3><p>Аккуратный маникюр и педикюр в эстетике студии.</p><span class="arrow">↗</span></article>
+    <article class="service reveal"><small>05 — STYLE</small><h3>Укладки</h3><p>Завершённый образ для повседневности, события или особого случая.</p><span class="arrow">↗</span></article>
+    <article class="service reveal"><small>06 — CONSULT</small><h3>Консультация</h3><p>Обсудим задачу, состояние волос и подходящий результат до начала работы.</p><span class="arrow">↗</span></article>
+  </div>
+</section>
+<section class="work" id="works">
+  <div class="worktop reveal"><div><div class="section-label">03 / Selected work</div><h2>Работа говорит<br><em>сама за себя.</em></h2></div><p class="section-label">Визуальная концепция портфолио<br>Визуальные референсы · не портфолио студии</p></div>
+  <div class="workgrid">
+    <div><div class="workitem tall"><img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=1200&q=85" alt="Пример редакционной фотографии волос"></div><div class="workcaption"><span>Colour / Texture</span><span>01 — Editorial reference</span></div></div>
+    <div class="workside">
+      <div><div class="workitem small"><img src="https://images.unsplash.com/photo-1560869713-da86a9ec7f1a?auto=format&fit=crop&w=1000&q=85" alt="Пример укладки волос"></div><div class="workcaption"><span>Shape / Movement</span><span>02 — Reference</span></div></div>
+      <div><div class="workitem small"><img src="https://images.unsplash.com/photo-1524250502761-1ac6f2e30d43?auto=format&fit=crop&w=1000&q=85" alt="Пример beauty-портрета"></div><div class="workcaption"><span>Identity / Detail</span><span>03 — Reference</span></div></div>
+    </div>
+  </div>
+</section>
+<section class="team" id="team">
+  <div class="teamgrid">
+    <div class="teamvisual reveal"><img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=1100&q=85" alt="Портрет стилиста, визуальная концепция"></div>
+    <div class="teamcopy reveal"><div class="section-label">04 / The people</div><h2>За каждой<br>деталью — <em>мастер.</em></h2><p>Сильный результат начинается с диалога. В обновлённой версии сайта у каждого специалиста может появиться собственная страница: специализация, опыт, портфолио и удобная запись.</p><div class="teamfacts"><div class="fact"><strong>01:1</strong><span>Личный подход</span></div><div class="fact"><strong>PRO</strong><span>Экспертиза</span></div><div class="fact"><strong>∞</strong><span>Варианты стиля</span></div></div><a class="textlink" href="#booking">Познакомиться со студией ↗</a></div>
+  </div>
+</section>
+<section class="brands">
+  <div class="brands-label">Профессиональный уход<br>и косметика</div>
+  <div class="brandname">DAVINES</div><div class="brandname">SEBASTIAN</div><div class="brandname">WELLA</div>
+</section>
+<section class="booking" id="booking">
+  <div><div class="section-label">05 / Your next look</div><h2>Найдите<br>свой <em>образ.</em></h2></div>
+  <div class="booking-side"><p>Выберите направление, познакомьтесь с работами мастеров и запланируйте визит. В этой концепции кнопка записи должна вести в действующую систему студии.</p><a class="pill" href="https://bladestudio.ru/" target="_blank" rel="noopener">Перейти к записи <span>↗</span></a><p style="font-size:10px;color:#535744;margin-top:18px">Демонстрационная ссылка ведёт на текущий сайт Blade Studio.</p></div>
+</section>
+</main>
+<footer class="footer">
+  <div class="footer-top"><div class="footer-logo">BLADE<span>®</span></div><div class="footer-info"><div class="footer-col"><small>Explore</small><a href="#about">О студии</a><a href="#services">Услуги</a><a href="#works">Работы</a><a href="#team">Команда</a></div><div class="footer-col"><small>Visit</small><p>Москва<br>Трубниковский переулок, 11</p><a href="https://bladestudio.ru/">Официальный сайт ↗</a></div></div></div>
+  <div class="footer-bottom"><span>BLADE STUDIO — CONCEPT REDESIGN · НЕОФИЦИАЛЬНЫЙ ПРОЕКТ</span><span>Independent concept · 2026</span></div>
+</footer>
+<script>
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const nav=document.querySelector('.navlinks');
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('mobile-open')));
+const style=document.createElement('style');style.textContent='@media(max-width:800px){.navlinks.mobile-open{display:flex;position:absolute;top:70px;left:0;right:0;background:var(--paper);padding:25px 7vw;flex-direction:column;gap:20px;border-bottom:1px solid var(--line)}}';document.head.appendChild(style);
+</script>
+</body>
+</html>
